@@ -1,0 +1,165 @@
+---
+layout: default
+---
+
+<div id="info-box">
+    <div id="state_name"></div>
+    <div id="races"></div>
+</div>
+
+<div style="text-align: center">
+    <button id="prev_year">previous</button>
+    <span id="year">YYYY</span>
+    <button id="next_year">next</button>
+    <br>
+    <div style="display: grid; grid-template-columns: auto 400px;">
+        <div id="graphic" style="padding: 0 32px;">
+            <div id="cart">{% include {{ page.type }}_cart.svg %}</div>
+            <div id="map">{% include {{ page.type }}_map.svg %}</div>
+        </div>
+        {% include {{ page.type }}_sidebar.html %}
+    </div>
+</div>
+
+<script>
+    const abbr_map = {"AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California", "CO": "Colorado", "CT": "Connecticut", "DC": "the District of Columbia", "DE": "Delaware", "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho", "IL": "Illinois", "IN": "Indiana", "IA": "Iowa", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana", "ME": "Maine", "MD": "Maryland", "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi", "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada", "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York", "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma", "OR": "Oregon", "PA": "Pennsylvania", "RI": "Rhode Island", "SC": "South Carolina", "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas", "UT": "Utah", "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming"};
+    const name_map = {"Alabama": "AL", "Alaska": "AK", "Arizona": "AZ", "Arkansas": "AR", "California": "CA", "Colorado": "CO", "Connecticut": "CT", "the District of Columbia": "DC", "Delaware": "DE", "Florida": "FL", "Georgia": "GA", "Hawaii": "HI", "Idaho": "ID", "Illinois": "IL", "Indiana": "IN", "Iowa": "IA", "Kansas": "KS", "Kentucky": "KY", "Louisiana": "LA", "Maine": "ME", "Maryland": "MD", "Massachusetts": "MA", "Michigan": "MI", "Minnesota": "MN", "Mississippi": "MS", "Missouri": "MO", "Montana": "MT", "Nebraska": "NE", "Nevada": "NV", "New Hampshire": "NH", "New Jersey": "NJ", "New Mexico": "NM", "New York": "NY", "North Carolina": "NC", "North Dakota": "ND", "Ohio": "OH", "Oklahoma": "OK", "Oregon": "OR", "Pennsylvania": "PA", "Rhode Island": "RI", "South Carolina": "SC", "South Dakota": "SD", "Tennessee": "TN", "Texas": "TX", "Utah": "UT", "Vermont": "VT", "Virginia": "VA", "Washington": "WA", "West Virginia": "WV", "Wisconsin": "WI", "Wyoming": "WY"};
+
+    const parties = "rep dem ind indem inrep lib grn runoff other";
+    const party_map = {
+        "Republican": "rep",
+        "Democratic": "dem", "Democratic (DFL)": "dem", "Democratic-NPL": "dem",
+        "Connecticut for Lieberman": "indem",
+        "Ind.-Republican": "inrep",
+        "Libertarian": "lib", "Green": "grn",
+        "Independent": "ind"}
+    const caucus_map = {
+        "Republican": "Republican", "Ind.-Republican": "Republican", 
+        "Democratic": "Democratic", "Democratic (DFL)": "Democratic", "Democratic-NPL": "Democratic", "Connecticut for Lieberman": "Democratic"
+    };
+
+    function party_class(name) {
+        if (name in party_map) {
+            return party_map[name];
+        }
+
+        return "other";
+    }
+
+    var year_index = 0;
+    var year;
+
+    var data;
+    var valid_years = [];
+
+    var viewing = "map";
+
+    function update_data() {
+        valid_years = [];
+
+        for (const y in data) {
+            valid_years.push(y);
+        }
+
+        valid_years.sort(function(a, b){return b-a});
+        year = valid_years[0];
+    }
+
+    $(document).mousemove(function(e) {      
+        if (e.pageX - 10 + $('#info-box').width() <= $(window).width()) {
+            $('#info-box').css('left',e.pageX + 5);
+        }
+        else {
+            $('#info-box').css('left',e.pageX - 30 - $('#info-box').width() );
+        }
+
+        if (e.pageY - 10 + $('#info-box').height() <= $(window).height()) {
+            $('#info-box').css('top',e.pageY + 5);
+        }
+        else {
+            $('#info-box').css('top',e.pageY - 5 - $('#info-box').height() );
+        }
+    }).mouseover();
+
+    $("#prev_year").click(function(e) {
+        update_year(year_index + 1);
+    });
+
+    $("#next_year").click(function(e) {
+        update_year(year_index - 1);
+    });
+
+    {% include {{ page.type }}.js %}
+
+    function update_year(new_index) {
+        if (new_index < 0 || new_index >= valid_years.length) return;
+        year_index = new_index;
+        year = valid_years[new_index];
+        $('#year').html(year);
+        $('#year_info').find('#year').html(year);
+
+        $("#next_year").prop('disabled',(year_index == 0))
+        $("#prev_year").prop('disabled',(year_index == valid_years.length-1))
+
+        for (const abbr in abbr_map) {
+            $("g#" + abbr).find("*").removeClass(parties);
+
+            $('.striped').each(function(i,obj) {
+                obj.remove();
+            })
+        }
+
+        update_map_and_info(year);
+    }
+
+    var map, cart;
+
+    $("g.outer,g.txt").mouseleave(function(e) {
+        state_abbrev = $(this).attr("id").replace("_txt","");
+        $('#' + state_abbrev).removeClass("hovering");
+        $('#info-box').css('display','none');
+    });
+
+    $(document).ready(function() {
+        map = $('#graphic').find('#map');
+        cart = $('#graphic').find('#cart');
+
+        cart.detach();
+        $('#graphic').append(map);
+
+        $.getJSON("/assets/data/" + election_type + ".json", function(loaded_data) {
+            data = loaded_data;
+
+            update_data();
+            update_year(year_index);
+
+            updateHeight();
+        }).fail(function() {
+            console.log("Error: could not load senate data.");
+        });
+    });
+
+    $('button#map').click(function(e) {
+        cart.detach();
+        $('#graphic').append(map);
+        updateHeight();
+        viewing = "map";
+        update_year(year_index);
+    });
+
+    $('button#cart').click(function(e) {
+        map.detach();
+        $('#graphic').append(cart);
+        updateHeight();
+        viewing = "cart";
+        update_year(year_index);
+    });
+
+    $(window).resize(function() {
+        updateHeight();
+    });
+
+    function updateHeight() {
+        $('#graphic').find('svg').css({'max-height': $(window).height()-64});
+    }
+</script>

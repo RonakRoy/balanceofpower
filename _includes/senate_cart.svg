@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" class="cartogram" id="senatecartsvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 550 400" style="enable-background:new 0 0 550 400;" xml:space="preserve">
+
+    {% include svg_defs.html %}
+	
+	<g id="AK" class="AK outer">
+		<g id="AK_secondary" class="AK">
+			<polygon points="50,0 50,50 0,50 		"/>
+		</g>
+		<g id="AK_main" class="AK main">
+			<polygon points="0,50 0,0 50,0 		"/>
+		</g>
+		<text class="AK" transform="matrix(1 0 0 1 12.7588 31.2505)">AK</text>
+	</g>
+	<g id="WA" class="WA outer">
+		<g id="WA_secondary" class="WA">
+			<polygon points="50,100 50,150 0,150 		"/>
+		</g>
+		<g id="WA_main" class="WA main">
+			<polygon points="0,150 0,100 50,100 		"/>
+		</g>
+		<text class="WA" transform="matrix(1 0 0 1 9.8564 131.2505)">WA</text>
+	</g>
+	<g id="OR" class="OR outer">
+		<g id="OR_secondary" class="OR">
+			<polygon points="50,150 50,200 0,200 		"/>
+		</g>
+		<g id="OR_main" class="OR main">
+			<polygon points="0,200 0,150 50,150 		"/>
+		</g>
+		<text class="OR" transform="matrix(1 0 0 1 11.8101 181.2505)">OR</text>
+	</g>
+	<g id="CA" class="CA outer">
+		<g id="CA_secondary" class="CA">
+			<polygon points="50,200 50,250 0,250 		"/>
+		</g>
+		<g id="CA_main" class="CA main">
+			<polygon points="0,250 0,200 50,200 		"/>
+		</g>
+		<text class="CA" transform="matrix(1 0 0 1 12.5225 231.2505)">CA</text>
+	</g>
+	<g id="HI" class="HI outer">
+		<g id="HI_secondary" class="HI">
+			<polygon points="50,350 50,400 0,400 		"/>
+		</g>
+		<g id="HI_main" class="HI main">
+			<polygon points="0,400 0,350 50,350 		"/>
+		</g>
+		<text class="HI" transform="matrix(1 0 0 1 15.2041 381.2505)">HI</text>
+	</g>
+	<g id="MT" class="MT outer">
+		<g id="MT_secondary" class="MT">
+			<polygon points="100,100 100,150 50,150 		"/>
+		</g>
+		<g id="MT_main" class="MT main">
+			<polygon points="50,150 50,100 100,100 		"/>
+		</g>
+		<text class="MT" transform="matrix(1 0 0 1 61.4512 131.2505)">MT</text>
+	</g>
+	<g id="ID" class="ID outer">
+		<g id="ID_secondary" class="ID">
+			<polygon points="100,150 100,200 50,200 		"/>
+		</g>
+		<g id="ID_main" class="ID main">
+			<polygon points="50,200 50,150 100,150 		"/>
+		</g>
+		<text class="ID" transform="matrix(1 0 0 1 65.6348 181.2505)">ID</text>
+	</g>
+	<g id="NV" class="NV outer">
+		<g id="NV_secondary" class="NV">
+			<polygon points="100,200 100,250 50,250 		"/>
+		</g>
+		<g id="NV_main" class="NV main">
+			<polygon points="50,250 50,200 100,200 		"/>
+		</g>
+		<text class="NV" transform="matrix(1 0 0 1 62.1279 231.2505)">NV</text>
+	</g>
+	<g id="UT" class="UT outer">
+		<g id="UT_secondary" class="UT">
+			<polygon points="100,250 100,300 50,300 		"/>
+		</g>
+		<g id="UT_main" class="UT main">
+			<polygon points="50,300 50,250 100,250 		"/>
+		</g>
+		<text class="UT" transform="matrix(1 0 0 1 62.0918 281.2505)">UT</text>
+	</g>
+	<g id="AZ" class="AZ outer">
+		<g id="AZ_secondary" class="AZ">
+			<polygon points="100,300 100,350 50,350 		"/>
+		</g>
+		<g id="AZ_main" class="AZ main">
+			<polygon points="50,350 50,300 100,300 		"/>
+		</g>
+		<text class="AZ" transform="matrix(1 0 0 1 63.0254 331.2505)">AZ</text>
+	</g>
+	<g id="ND" class="ND outer">
+		<g id="ND_secondary" class="ND">
+			<polygon points="150,100 150,150 100,150 		"/>
+		</g>
+		<g id="ND_main" class="ND main">
+			<polygon points="100,150 100,100 150,100 		"/>
+		</g>
+		<text class="ND" transform="matrix(1 0 0 1 111.8564 131.2505)">ND</text>
+	</g>
+	<g id="SD" class="SD outer">
+		<g id="SD_secondary" class="SD">
+			<polygon points="150,150 150,200 100,200 		"/>
+		</g>
+		<g id="SD_main" class="SD main">
+			<polygon points="100,200 100,150 150,150 		"/>
+		</g>
+		<text class="SD" transform="matrix(1 0 0 1 113.5068 181.2505)">SD</text>
+	</g>
+	<g id="WY" class="WY outer">
+		<g id="WY_secondary" class="WY">
+			<polygon points="150,200 150,250 100,250 		"/>
+		</g>
+		<g id="WY_main" class="WY main">
+			<polygon points="100,250 100,200 150,200 		"/>
+		</g>
+		<text class="WY" transform="matrix(1 0 0 1 110.0615 231.2505)">WY</text>
+	</g>
+	<g id="CO" class="CO outer">
+		<g id="CO_secondary" class="CO">
+			<polygon points="150,250 150,300 100,300 		"/>
+		</g>
+		<g id="CO_main" class="CO main">
+			<polygon points="100,300 100,250 150,250 		"/>
+		</g>
+		<text class="CO" transform="matrix(1 0 0 1 111.6406 281.2505)">CO</text>
+	</g>
+	<g id="NM" class="NM outer">
+		<g id="NM_secondary" class="NM">
+			<polygon points="150,300 150,350 100,350 		"/>
+		</g>
+		<g id="NM_main" class="NM main">
+			<polygon points="100,350 100,300 150,300 		"/>
+		</g>
+		<text class="NM" transform="matrix(1 0 0 1 110.8462 331.2505)">NM</text>
+	</g>
+	<g id="MN" class="MN outer">
+		<g id="MN_secondary" class="MN">
+			<polygon points="200,100 200,150 150,150 		"/>
+		</g>
+		<g id="MN_main" class="MN main">
+			<polygon points="150,150 150,100 200,100 		"/>
+		</g>
+		<text class="MN" transform="matrix(1 0 0 1 160.8462 131.2505)">MN</text>
+	</g>
+	<g id="IA" class="IA outer">
+		<g id="IA_secondary" class="IA">
+			<polygon points="200,150 200,200 150,200 		"/>
+		</g>
+		<g id="IA_main" class="IA main">
+			<polygon points="150,200 150,150 200,150 		"/>
+		</g>
+		<text class="IA" transform="matrix(1 0 0 1 165.8809 181.2505)">IA</text>
+	</g>
+	<g id="NE" class="NE outer">
+		<g id="NE_secondary" class="NE">
+			<polygon points="200,200 200,250 150,250 		"/>
+		</g>
+		<g id="NE_main" class="NE main">
+			<polygon points="150,250 150,200 200,200 		"/>
+		</g>
+		<text class="NE" transform="matrix(1 0 0 1 162.6714 231.2505)">NE</text>
+	</g>
+	<g id="KS" class="KS outer">
+		<g id="KS_secondary" class="KS">
+			<polygon points="200,250 200,300 150,300 		"/>
+		</g>
+		<g id="KS_main" class="KS main">
+			<polygon points="150,300 150,250 200,250 		"/>
+		</g>
+		<text class="KS" transform="matrix(1 0 0 1 163.9019 281.2505)">KS</text>
+	</g>
+	<g id="OK" class="OK outer">
+		<g id="OK_secondary" class="OK">
+			<polygon points="200,300 200,350 150,350 		"/>
+		</g>
+		<g id="OK_main" class="OK main">
+			<polygon points="150,350 150,300 200,300 		"/>
+		</g>
+		<text class="OK" transform="matrix(1 0 0 1 161.877 331.2505)">OK</text>
+	</g>
+	<g id="TX" class="TX outer">
+		<g id="TX_secondary" class="TX">
+			<polygon points="200,350 200,400 150,400 		"/>
+		</g>
+		<g id="TX_main" class="TX main">
+			<polygon points="150,400 150,350 200,350 		"/>
+		</g>
+		<text class="TX" transform="matrix(1 0 0 1 163.0557 381.2505)">TX</text>
+	</g>
+	<g id="WI" class="WI outer">
+		<g id="WI_secondary" class="WI">
+			<polygon points="250,100 250,150 200,150 		"/>
+		</g>
+		<g id="WI_main" class="WI main">
+			<polygon points="200,150 200,100 250,100 		"/>
+		</g>
+		<text class="WI" transform="matrix(1 0 0 1 213.1279 131.2505)">WI</text>
+	</g>
+	<g id="IL" class="IL outer">
+		<g id="IL_secondary" class="IL">
+			<polygon points="250,150 250,200 200,200 		"/>
+		</g>
+		<g id="IL_main" class="IL main">
+			<polygon points="200,200 200,150 250,150 		"/>
+		</g>
+		<text class="IL" transform="matrix(1 0 0 1 216.7578 181.2505)">IL</text>
+	</g>
+	<g id="MO" class="MO outer">
+		<g id="MO_secondary" class="MO">
+			<polygon points="250,200 250,250 200,250 		"/>
+		</g>
+		<g id="MO_main" class="MO main">
+			<polygon points="200,250 200,200 250,200 		"/>
+		</g>
+		<text class="MO" transform="matrix(1 0 0 1 210.4717 231.2505)">MO</text>
+	</g>
+	<g id="AR" class="AR outer">
+		<g id="AR_secondary" class="AR">
+			<polygon points="250,250 250,300 200,300 		"/>
+		</g>
+		<g id="AR_main" class="AR main">
+			<polygon points="200,300 200,250 250,250 		"/>
+		</g>
+		<text class="AR" transform="matrix(1 0 0 1 212.6919 281.2505)">AR</text>
+	</g>
+	<g id="LA" class="LA outer">
+		<g id="LA_secondary" class="LA">
+			<polygon points="250,300 250,350 200,350 		"/>
+		</g>
+		<g id="LA_main" class="LA main">
+			<polygon points="200,350 200,300 250,300 		"/>
+		</g>
+		<text class="LA" transform="matrix(1 0 0 1 213.4863 331.2505)">LA</text>
+	</g>
+	<g id="IN" class="IN outer">
+		<g id="IN_secondary" class="IN">
+			<polygon points="300,150 300,200 250,200 		"/>
+		</g>
+		<g id="IN_main" class="IN main">
+			<polygon points="250,200 250,150 300,150 		"/>
+		</g>
+		<text class="IN" transform="matrix(1 0 0 1 265.373 181.2505)">IN</text>
+	</g>
+	<g id="KY" class="KY outer">
+		<g id="KY_secondary" class="KY">
+			<polygon points="300,200 300,250 250,250 		"/>
+		</g>
+		<g id="KY_main" class="KY main">
+			<polygon points="250,250 250,200 300,200 		"/>
+		</g>
+		<text class="KY" transform="matrix(1 0 0 1 262.9639 231.2505)">KY</text>
+	</g>
+	<g id="TN" class="TN outer">
+		<g id="TN_secondary" class="TN">
+			<polygon points="300,250 300,300 250,300 		"/>
+		</g>
+		<g id="TN_main" class="TN main">
+			<polygon points="250,300 250,250 300,250 		"/>
+		</g>
+		<text class="TN" transform="matrix(1 0 0 1 262.1997 281.2505)">TN</text>
+	</g>
+	<g id="MS" class="MS outer">
+		<g id="MS_secondary" class="MS">
+			<polygon points="300,300 300,350 250,350 		"/>
+		</g>
+		<g id="MS_main" class="MS main">
+			<polygon points="250,350 250,300 300,300 		"/>
+		</g>
+		<text class="MS" transform="matrix(1 0 0 1 262.4971 331.2505)">MS</text>
+	</g>
+	<g id="MI" class="MI outer">
+		<g id="MI_secondary" class="MI">
+			<polygon points="350,100 350,150 300,150 		"/>
+		</g>
+		<g id="MI_main" class="MI main">
+			<polygon points="300,150 300,100 350,100 		"/>
+		</g>
+		<text class="MI" transform="matrix(1 0 0 1 314.625 131.2505)">MI</text>
+	</g>
+	<g id="OH" class="OH outer">
+		<g id="OH_secondary" class="OH">
+			<polygon points="350,150 350,200 300,200 		"/>
+		</g>
+		<g id="OH_main" class="OH main">
+			<polygon points="300,200 300,150 350,150 		"/>
+		</g>
+		<text class="OH" transform="matrix(1 0 0 1 311.0513 181.2505)">OH</text>
+	</g>
+	<g id="WV" class="WV outer">
+		<g id="WV_secondary" class="WV">
+			<polygon points="350,200 350,250 300,250 		"/>
+		</g>
+		<g id="WV_main" class="WV main">
+			<polygon points="300,250 300,200 350,200 		"/>
+		</g>
+		<text class="WV" transform="matrix(1 0 0 1 309.8823 231.2505)">WV</text>
+	</g>
+	<g id="AL" class="AL outer">
+		<g id="AL_secondary" class="AL">
+			<polygon points="350,250 350,300 300,300 		"/>
+		</g>
+		<g id="AL_main" class="AL main">
+			<polygon points="300,300 300,250 350,250 		"/>
+		</g>
+		<text class="AL" transform="matrix(1 0 0 1 313.4863 281.2505)">AL</text>
+	</g>
+	<g id="GA" class="GA outer">
+		<g id="GA_secondary" class="GA">
+			<polygon points="350,300 350,350 300,350 		"/>
+		</g>
+		<g id="GA_main" class="GA main">
+			<polygon points="300,350 300,300 350,300 		"/>
+		</g>
+		<text class="GA" transform="matrix(1 0 0 1 311.7021 331.2505)">GA</text>
+	</g>
+	<g id="PA" class="PA outer">
+		<g id="PA_secondary" class="PA">
+			<polygon points="400,150 400,200 350,200 		"/>
+		</g>
+		<g id="PA_main" class="PA main">
+			<polygon points="350,200 350,150 400,150 		"/>
+		</g>
+		<text class="PA" transform="matrix(1 0 0 1 362.9482 181.2505)">PA</text>
+	</g>
+	<g id="NC" class="NC outer">
+		<g id="NC_secondary" class="NC">
+			<polygon points="400,200 400,250 350,250 		"/>
+		</g>
+		<g id="NC_main" class="NC main">
+			<polygon points="350,250 350,200 400,200 		"/>
+		</g>
+		<text class="NC" transform="matrix(1 0 0 1 362.0151 231.2505)">NC</text>
+	</g>
+	<g id="SC" class="SC outer">
+		<g id="SC_secondary" class="SC">
+			<polygon points="400,250 400,300 350,300 		"/>
+		</g>
+		<g id="SC_main" class="SC main">
+			<polygon points="350,300 350,250 400,250 		"/>
+		</g>
+		<text class="SC" transform="matrix(1 0 0 1 363.666 281.2505)">SC</text>
+	</g>
+	<g id="VA" class="VA outer">
+		<g id="VA_secondary" class="VA">
+			<polygon points="450,200 450,250 400,250 		"/>
+		</g>
+		<g id="VA_main" class="VA main">
+			<polygon points="400,250 400,200 450,200 		"/>
+		</g>
+		<text class="VA" transform="matrix(1 -1.019264e-03 1.019264e-03 1 412.642 231.2635)">VA</text>
+	</g>
+	<g id="DE" class="DE outer">
+		<g id="DE_secondary" class="DE">
+			<polygon points="450,150 450,200 400,200 		"/>
+		</g>
+		<g id="DE_main" class="DE main">
+			<polygon points="400,200 400,150 450,150 		"/>
+		</g>
+		<text class="DE" transform="matrix(1 -1.019264e-03 1.019264e-03 1 412.9389 181.2632)">DE</text>
+	</g>
+	<g id="NY" class="NY outer">
+		<g id="NY_secondary" class="NY">
+			<polygon points="450,100 450,150 400,150 		"/>
+		</g>
+		<g id="NY_main" class="NY main">
+			<polygon points="400,150 400,100 450,100 		"/>
+		</g>
+		<text class="NY" transform="matrix(1 -1.019264e-03 1.019264e-03 1 412.3139 131.2639)">NY</text>
+	</g>
+	<g id="MD" class="MD outer">
+		<g id="MD_secondary" class="MD">
+			<polygon points="500,200 500,250 450,250 		"/>
+		</g>
+		<g id="MD_main" class="MD main">
+			<polygon points="450,250 450,200 500,200 		"/>
+		</g>
+		<text class="MD" transform="matrix(1 -1.019264e-03 1.019264e-03 1 461.1137 231.2651)">MD</text>
+	</g>
+	<g id="NJ" class="NJ outer">
+		<g id="NJ_secondary" class="NJ">
+			<polygon points="500,150 500,200 450,200 		"/>
+		</g>
+		<g id="NJ_main" class="NJ main">
+			<polygon points="450,200 450,150 500,150 		"/>
+		</g>
+		<text class="NJ" transform="matrix(1 -1.019264e-03 1.019264e-03 1 463.2982 181.2628)">NJ</text>
+	</g>
+	<g id="CT" class="CT outer">
+		<g id="CT_secondary" class="CT">
+			<polygon points="500,100 500,150 450,150 		"/>
+		</g>
+		<g id="CT_main" class="CT main">
+			<polygon points="450,150 450,100 500,100 		"/>
+		</g>
+		<text class="CT" transform="matrix(1 -1.019264e-03 1.019264e-03 1 462.6264 131.2635)">CT</text>
+	</g>
+	<g id="VT" class="VT outer">
+		<g id="VT_secondary" class="VT">
+			<polygon points="500,50 500,100 450,100 		"/>
+		</g>
+		<g id="VT_main" class="VT main">
+			<polygon points="450,100 450,50 500,50 		"/>
+		</g>
+		<text class="VT" transform="matrix(1 -1.019264e-03 1.019264e-03 1 462.7392 81.2634)">VT</text>
+	</g>
+	<g id="RI" class="RI outer">
+		<g id="RI_secondary" class="RI">
+			<polygon points="550,150 550,200 500,200 		"/>
+		</g>
+		<g id="RI_main" class="RI main">
+			<polygon points="500,200 500,150 550,150 		"/>
+		</g>
+		<text class="RI" transform="matrix(1 -1.019264e-03 1.019264e-03 1 515.9691 181.2601)">RI</text>
+	</g>
+	<g id="MA" class="MA outer">
+		<g id="MA_secondary" class="MA">
+			<polygon points="550,100 550,150 500,150 		"/>
+		</g>
+		<g id="MA_main" class="MA main">
+			<polygon points="500,150 500,100 550,100 		"/>
+		</g>
+		<text class="MA" transform="matrix(1 -1.019264e-03 1.019264e-03 1 511.3598 131.2648)">MA</text>
+	</g>
+	<g id="NH" class="NH outer">
+		<g id="NH_secondary" class="NH">
+			<polygon points="550,50 550,100 500,100 		"/>
+		</g>
+		<g id="NH_main" class="NH main">
+			<polygon points="500,100 500,50 550,50 		"/>
+		</g>
+		<text class="NH" transform="matrix(1 -1.019264e-03 1.019264e-03 1 511.432 81.2648)">NH</text>
+	</g>
+	<g id="ME" class="ME outer">
+		<g id="ME_secondary" class="ME">
+			<polygon points="550,0 550,50 500,50 		"/>
+		</g>
+		<g id="ME_main" class="ME main">
+			<polygon points="500,50 500,0 550,0 		"/>
+		</g>
+		<text class="ME" transform="matrix(1 -1.019264e-03 1.019264e-03 1 511.9291 31.2643)">ME</text>
+	</g>
+	<g id="FL" class="FL outer">
+		<g id="FL_secondary" class="FL">
+			<polygon points="400,350 400,400 350,400 		"/>
+		</g>
+		<g id="FL_main" class="FL main">
+			<polygon points="350,400 350,350 400,350 		"/>
+		</g>
+		<text class="FL" transform="matrix(1 0 0 1 364.1685 381.2505)">FL</text>
+	</g>
+</svg>

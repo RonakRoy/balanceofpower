@@ -1,0 +1,57 @@
+{
+    "1974": {
+        "Alabama": {
+            "3": {
+                "before": {
+                    "senator": "unknown",
+                    "party": "Democratic"
+                }
+            }
+        }
+    },
+
+    "1986": {
+        "Pennsylvania": {
+            "3": {
+                "before": {
+                    "senator": "Arlen Specter",
+                    "party": "Republican"
+                }
+            }
+        }
+    },
+
+    "1990": {
+        "South Dakota": {
+            "2": {
+                "before": {
+                    "senator": "Larry Pressler",
+                    "party": "Republican"
+                }
+            }
+        }
+    },
+
+    "1996": {
+        "Oregon": {
+            "3": {
+                "before": {
+                    "senator": "unknown",
+                    "party": "Republican"
+                }
+            }
+        }
+    },
+
+
+    "2020": {
+        "ID": {
+            "2": {
+              "before": {
+                "senator": "Jim Risch",
+                "party": "Republican"
+              }
+            }
+        }
+    }
+}

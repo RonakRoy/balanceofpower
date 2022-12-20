@@ -1,0 +1,269 @@
+$backgroundColor: #ffffff;
+$bodyColor: #000000;
+$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+$base-font-size: 12pt;
+
+$dem: #0A3161;
+$rep: #B31942;
+$indem: #1354a3;
+$inrep: #c7365d;
+$ind: #691769;
+$lib: #e9dd73;
+$grn: #6cdb9a;
+$other: #ff00dd;
+$runoff: #3d3d3d;
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+  font-size: $base-font-size;
+}
+
+@mixin compat($prop, $value) {
+            #{$prop}: $value;
+    -webkit-#{$prop}: $value;
+       -moz-#{$prop}: $value;
+        -ms-#{$prop}: $value;
+         -o-#{$prop}: $value;
+}
+
+@mixin fill($color) {
+  &, & path:not(.cd), & polygon {
+    fill: $color;
+  } 
+}
+
+@mixin dim($color) {
+  @include fill(darken($color: $color, $amount: 10));
+}
+
+text {
+  font-size:21px;
+  font-style:normal;
+  font-variant:normal;
+  font-weight:normal;
+  font-stretch:normal;
+  line-height:125%;
+  letter-spacing:0px;
+  word-spacing:0px;
+  fill:#ffffff;
+  fill-opacity:1;
+  stroke:none;
+  font-family: "Trebuchet MS", "Helvetica", sans-serif;
+  text-shadow: 0px 0px 1px black;
+}
+
+path, polygon, circle {
+  @include compat(transition, all 0.2s);
+
+  fill:#aaaaaa;
+  fill-opacity:1;
+  stroke:#ffffff;
+  stroke-width:1.25;
+  stroke-miterlimit:4;
+  stroke-opacity:1;
+  stroke-dasharray:none;
+}
+
+circle {
+  display: none;
+}
+
+.secondary {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke:#c4c4c4;
+  stroke-width:2;
+}
+
+text:hover,g.txt:hover {
+  cursor: pointer;
+}
+
+g.outer:hover, g.outer.hovering {
+  cursor: pointer;
+
+  path, polygon, circle {
+    stroke-linejoin: round;
+    fill: #5a5a5a;
+  }
+
+  & .dem   { @include dim($dem); }
+  & .rep   { @include dim($rep); }
+  & .ind   { @include dim($ind); }
+  & .indem { @include dim($indem); }
+  & .inrep { @include dim($inrep); }
+  & .grn   { @include dim($grn); }
+  & .lib   { @include dim($lib); }
+  & .other { @include dim($other); }
+  & .runoff { @include dim($color: $runoff); }
+
+  .cart_outline {
+    fill: none;
+  }
+}
+
+.map {
+  .striped { @include fill(url(#map-stripes)); }
+  g.outer:hover { & .striped { @include fill(url(#map-stripes)); }}
+}
+
+.cartogram {
+  .striped { @include fill(url(#cart-stripes)); }
+  g.outer:hover { & .striped { @include fill(url(#cart-stripes)); }}
+}
+
+.dem   { @include fill($dem); display: inline; }
+.rep   { @include fill($rep); display: inline;  }
+.ind   { @include fill($ind); display: inline;  }
+.indem { @include fill($indem); display: inline;  }
+.inrep { @include fill($inrep); display: inline;  }
+.grn   { @include fill($grn); display: inline;  }
+.lib   { @include fill($lib); display: inline;  }
+.other { @include fill($other); display: inline;  }
+.runoff { @include fill($runoff); display: inline;  }
+
+.txt>g>path {
+  stroke:none;
+  fill: black;
+}
+
+#info-box {
+  @include compat(box-shadow, rgba(0,0,0,0.75) 2px 4px 6px);
+
+  display: none;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 320px;
+
+  background-color: #d4d4d4;
+  padding: 0px;
+  padding-bottom: 8px;
+
+  border-radius: 4px;
+  
+  font-family: arial;
+
+  #state_name {
+    text-align: center;
+    font-weight: bold;
+
+    background: #3d3d3d;
+    color: #ffffff;
+    padding: 8px;
+
+    font-size: 1.25*$base-font-size;
+  }
+
+  .race {
+    background: #ffffff;
+    margin: 8px 8px 0px 8px;
+    padding: 12px;
+  }
+
+  .race-type {
+    text-align: center;
+    color: #6b6b6b;
+    // font-style: italic;
+  }
+
+  .candidate {
+    margin: 6px 0px;
+    padding: 6px 4px 6px 0px;
+    &:last-of-type { margin-bottom: 0px; }
+
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "color name percent"
+      "color party votes";
+
+    &.inc {
+      background: #dddddd;
+    }
+  }
+
+  .color {
+    grid-area: color;
+    place-self: center;
+
+    width: 24px;
+    height: 24px;
+
+    clip-path: circle(12px at center);
+
+    &.dem   {background: $dem;}
+    &.rep   {background: $rep;}
+    &.ind   {background: $ind;}
+    &.indem {background: $indem;}
+    &.inrep {background: $inrep;}
+    &.grn   {background: $grn;}
+    &.lib   {background: $lib;}
+    &.other {background: $other;}
+  }
+
+  .name {
+    grid-area: name;
+  }
+
+  .party {
+    grid-area: party;
+
+    color: #5a5a5a;
+    font-size: 0.75*$base-font-size;
+  }
+
+  .votes {
+    grid-area: votes;
+
+    text-align: right;
+    color: #5a5a5a;
+    font-size: 0.75*$base-font-size;
+  }
+
+  .percent {
+    grid-area: percent;
+
+    text-align: right;
+  }
+}
+
+.year_info {
+  .title {
+    font-size: 1.75*$base-font-size;
+    font-weight: bold;
+  }
+
+  .type {
+    font-size: 1.25*$base-font-size;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat_type {
+    font-size: 1.25*$base-font-size;
+    margin-top: 24px;
+    text-decoration: underline;
+  }
+
+  .number {
+    font-size: 2.5*$base-font-size;
+  }
+
+  .note {
+    margin-top: 36px;
+    color: #7e7e7e;
+  }
+}
